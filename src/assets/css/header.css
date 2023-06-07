@@ -1,0 +1,35 @@
+.meme--header {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+}
+
+.meme--header-content {
+    height: 65px;
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.meme--header-left, .meme--header-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.meme--header-left > h2 {
+    font-size: 2rem;
+}
+
+.meme--header-right > h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.meme--header-left > img {
+    height: 100%;
+    margin-right: 6px;
+}
