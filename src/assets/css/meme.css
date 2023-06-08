@@ -35,3 +35,11 @@
     border: none;
     cursor: pointer;
 }
+
+.meme--image {
+    max-width: 100%;
+}
+
+.meme--image > img {
+    width: 100%;
+}
