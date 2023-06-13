@@ -10,10 +10,20 @@ function Meme() {
         randomImage: "http://i.imgflip.com/1bij.jpg"
     })
 
+    // async alternative to .then
+    async function getMemes() {
+        const res = await fetch("https://api.imgflip.com/get_memes")
+        const data = await res.json()
+        setAllMemes(data.data.memes)
+        
+    }
+
     useEffect(function() {
         fetch("https://api.imgflip.com/get_memes")
             .then(res => res.json())
             .then(data => setAllMemes(data.data.memes))
+        // async implementation
+        // getMemes()
     }, [])
 
     function handleClick() {
@@ -23,7 +33,6 @@ function Meme() {
             randomImage: allMemes[randomNumber].url
         }))
     }
-
 
     function handleChange(event) {
         const {name, value} = event.target
